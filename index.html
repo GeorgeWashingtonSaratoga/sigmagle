@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title id = "title">Sigmagle</title>
+
+        <!-- General css file -->
+        <link id = "generalcss", href = "index.css", rel = "stylesheet"></link>
+
+        <!-- Theme css file -->
+        <link id = "themecss", href = "theme_dark.css", rel = "stylesheet"></link>
+
+        <!-- Comfortaa definition -->
+        <link href = "https://fonts.googleapis.com/css?family=Comfortaa", rel = "stylesheet">
+
+        <!-- Wire One definition -->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Wire+One" />
+
+        <!-- Lobster definition -->
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+
+        <!-- Dosis definition -->
+        <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet'>
+
+        <!-- Bad Script definition -->
+        <link href='https://fonts.googleapis.com/css?family=Bad Script' rel='stylesheet'>
+        
+        <!-- Font css file -->
+        <link id = "fontcss", href = "font_arial.css", rel = "stylesheet"></link>
+        
+        <link id = "icon", rel = "icon", href = "sigma.png">
+    </head>
+    <body>
+        <div id = "pagecontainer">
+            <h1>Sigmagle</h1>
+            <h3>Best Chatroom in Northeastern Ohio</h3>
+            <form id = "createroombuttonform">
+                <input type = "submit", id = "crbutton", name = "button", value = "Create Room", required>
+            </form>
+            <br>
+            <form id = "joinroombuttonform">
+                <input type = "submit", id = "jrbutton", name = "button", value = "Join Room", required>
+            </form>
+            <br>
+            <form id = "loginsignoutform">
+                <input type = "submit", id = "lsobutton", name = "lsobutton", value = "Login", required>
+            </form>
+        </div>
+        <br>
+        <br>
+        <form id = "themeselectform">
+            <select id = "themeselect", name = "themeselect">
+                <option value = "1">Light Mode</option>
+                <option value = "0">Dark Mode</option>
+                <option value = "2">Abyss</option>
+                <option value = "3">Amethyst</option>
+            </select>
+            <input type = "submit", id = "tsbutton", name = "tsbutton", value = "Change Theme", required>
+        </form>
+        <br>
+        <form id = "fontselectform">
+            <select id = "fontselect", name = "fontselect">
+                <option value = "0">Arial</option>
+                <option value = "1">Times New Roman</option>
+                <option value = "2">Comic Sans MS</option>
+                <option value = "3">Comfortaa</option>
+                <option value = "4">Wire One</option>
+                <option value = "5">Lobster</option>
+                <option value = "6">Courier New</option>
+                <option value = "7">Dosis</option>
+                <option value = "8">Bad Script</option>
+            </select>
+            <input type = "submit", id = "fsbutton", name = "fsbutton", value = "Change Font", required>
+        </form>
+        <style>
+            .profile-img {
+                max-width: 150px;
+                max-height: 150px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        </style>
+        <h2>Profile Picture Upload</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="profilePicture" accept="image/*">
+            <input type="submit" value="Upload">
+        </form>
+        <div id="imagePreview"></div>
+        <br><br>
+        <form id = "xtrabuttonform">
+            <input type = "submit", id = "xtrabutton", name = "xtrabutton", value = "Show extra", required>
+        </form>
+        <p id = "xtraexplain"></p>
+        <script src = "index.js", type = "module"></script>
+        <!-- definition of hideImg so that if an image does not load there is no "not found" icon -->
+        <script>
+            function showImg(img) {
+                img.style.display = "block";
+                img.previousSibling.style.display = "block";
+            }
+        </script>
+    </body>
+</html>
